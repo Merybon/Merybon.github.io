@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="generator" content="pandoc">
+  <meta name="author" content="María Emilia Bonfim" />
+  <title>Consejos para crear archivos EPUB 3 accesibles</title>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" href="reveal.js/css/reveal.css"/>
+    <style type="text/css">code{white-space: pre;}</style>
+    <link rel="stylesheet" href="reveal.js/css/theme/black.css"/>
+<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+<script>
+  if( window.location.search.match( /print-pdf/gi ) ) {
+    var link = document.createElement( 'link' );
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'reveal.js/css/print/pdf.css';
+    document.getElementsByTagName( 'head' )[0].appendChild( link );
+  }
+</script>
+  <!--[if lt IE 9]>
+  <script src="reveal.js/lib/js/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+<section>
+    <h1 class="title">Consejos para crear archivos EPUB 3 accesibles</h1>
+    <h3 class="author">María Emilia Bonfim</h3>
+    <h4 class="date">Marzo 2024</h3>
+</section>
+
+<section><section id="introducción-publicación-de-contenidos-accesibles" class="title-slide slide level1"><h1><span style="color: #99FF99;">Introducción: Publicación de contenidos accesibles</span></h1></section><section id="accesibilidad-epub" class="slide level2">
+<h2><span style="color:#FFFF00;">Accesibilidad EPUB</span></h2>
+
+<figure>
+<img data-src="epub.jpeg" alt="ePUB. Hombre con un enorme libro electrónico y varios archivos, papeles alrededor" /><figcaption>ePUB. Hombre con un enorme libro electrónico y varios archivos, papeles alrededor</figcaption>
+</figure>
+</section><section id="el-cambio-del-epub" class="slide level2">
+<h2><span style="color:#FFFF00;"> El cambio del ePUB</span></h2>
+<ul>
+<li><p>En 2017, la fusión del <strong>IDPF</strong> con el <strong>W3C</strong> marcó un cambio en la publicación digital: combina lo mejor de los libros empaquetados (EPUB) con la flexibilidad de la web.</p></li>
+<li><p>Aprenderá a crear EPUB accesible desde su concepción, cómo adaptar sus contenidos a formatos accesibles, técnicas y herramientas para hacer que los EPUB sean accesibles.</p></li>
+</ul>
+</section><section id="accesibilidad-de-los-epub" class="slide level2">
+<h2><span style="color:#FFFF00;">Accesibilidad de los ePUB</span></h2>
+<ul>
+<li>La accesibilidad se ocupa de tres cuestiones:
+<ol type="1">
+<li>cómo las personas con discapacidad acceden a la información electrónica;</li>
+<li>cómo diseñadores y desarrolladores de contenidos se aseguran de que los sitios web, las publicaciones y otros tipos de contenidos digitales funcionen correctamente en dispositivos y servicios de asistencia;</li>
+<li>y cómo puede lograrse que los contenidos y la digitalización sean accesibles desde su concepción.</li>
+</ol></li>
+</ul>
+</section></section>
+<section><section id="sección-1-estructura" class="title-slide slide level1"><h1><span style="color: #99FF99;">Sección 1: Estructura</span></h1></section><section id="todo-el-texto-debe-estar-disponible-en-un-orden-de-lectura-lógico." class="slide level2">
+<h2><span style="color:#FFFF00;">Todo el texto debe estar disponible en un orden de lectura lógico.</span></h2>
+<ul>
+<li>El texto <strong>NO</strong> debe presentarse como:
+<ul>
+<li>imágenes</li>
+<li>reordenarse mediante CSS</li>
+<li>requerir secuencias de comandos para acceder</li>
+</ul></li>
+<li><p>Utilice marcas estructurales para definir el orden de lectura natural principal y para distinguir material secundario como:</p>
+<ul>
+<li>Notas a pie de página</li>
+<li>Referencias</li>
+<li>Figuras</li>
+<li>Otros contenidos auxiliares.</li>
+</ul></li>
+</ul>
+</section><section id="presentación-y-contenido-separados" class="slide level2">
+<h2><span style="color:#FFFF00;">Presentación y contenido separados</span></h2>
+<ul>
+<li><p>La lectura visual es sólo una forma de acceder al contenido. No utilice señales únicamente visuales, como texto en color como única pista sobre el significado o importancia de una palabra o sección.</p></li>
+<li><p>No utilice tablas o imágenes de texto para controlar la apariencia del contenido. <strong>El significado del contenido debe ser el mismo <em>con</em> y <em>sin</em> ningún estilo o formato aplicado.</strong></p></li>
+</ul>
+</section><section id="proporcionar-navegación-completa" class="slide level2">
+<h2><span style="color:#FFFF00;">Proporcionar navegación completa</span></h2>
+<ul>
+<li><p>Incluya una tabla de contenido completa en la portada y considere tablas de contenido más pequeñas al comienzo de cada sección.</p></li>
+<li><p>Utilice las etiquetas <code>&lt;section&gt;</code> y <code>&lt;aside&gt;</code> en el contenido y la etiqueta <code>&lt;itemref linear=”no”&gt;</code> para definir un orden de lectura lógico.</p></li>
+<li><p>En esta <a href="https://www.w3schools.com/html/default.asp">web de W3schools</a> puedes saber más sobre las etiquetas mencionadas.</p></li>
+</ul>
+</section><section id="crear-una-estructura-significativa" class="slide level2">
+<h2><span style="color:#FFFF00;">Crear una estructura significativa</span></h2>
+<ul>
+<li><p>Si es posible, cree una estructura utilizando encabezados numerados en una estructura lógica.</p></li>
+<li><p>Para otras estructuras etiquetadas, especifique su contenido con el atributo epub:type.</p>
+<ol type="1">
+<li>Por ejemplo, la etiqueta que contiene el prefacio de un libro podría verse como <code>&lt;section epub:type=”preface”&gt;</code>.</li>
+</ol></li>
+<li><p>Las etiquetas específicas son solo para contenido específico (ej. la etiqueta <code>&lt;cite&gt;</code> es <strong>solo</strong> para citas). Usarse de acuerdo con el estándar.</p></li>
+<li><p>Utilice la etiqueta más específica disponible y no incluya automáticamente etiquetas <code>&lt;div&gt;</code> o <code>&lt;span&gt;</code> alrededor de todo.</p></li>
+</ul>
+</section><section id="definir-el-contenido-de-cada-etiqueta." class="slide level2">
+<h2><span style="color:#FFFF00;"> Definir el contenido de cada etiqueta.</span></h2>
+<ul>
+<li><p>Incluya información semántica para describir el contenido de una etiqueta.</p></li>
+<li><p>Utilice el Vocabulario de semántica estructural EPUB 3 tal como se define <a href="http://idpf.org/epub/vocab/structure/">en este enlace sobre la estructura</a> para identificar el contenido.</p></li>
+</ul>
+</section></section>
+<section><section id="sección-2-contenido" class="title-slide slide level1"><h1><span style="color: #99FF99;">Sección 2: Contenido</span></h1></section><section id="utilice-imágenes-solo-para-fotografías-no-para-tablas-o-texto." class="slide level2">
+<h2><span style="color:#FFFF00;"> Utilice imágenes solo para fotografías, <strong>no</strong> para tablas o texto.</span></h2>
+<ul>
+<li><p>Si se requiere una tabla o imagen para la comprensión del documento, utilice un marcado adecuado para el texto y los datos tabulares.</p></li>
+<li>Si las imágenes de texto son inevitables, proporcione una descripción y transcripción del texto (SVG accesible).
+<ul>
+<li>Los gráficos SVG accesibles permiten que el texto de las imágenes se represente de forma accesible.</li>
+</ul></li>
+<li><p>También pueden hacer posible entregar imágenes táctiles electrónicamente a usuarios ciegos con dispositivos apropiados o ayudar a automatizar la creación de imágenes táctiles.</p></li>
+</ul>
+</section><section id="utilice-descripciones-de-imágenes-y-texto-alternativo." class="slide level2">
+<h2><span style="color:#FFFF00;"> Utilice descripciones de imágenes y texto alternativo. </span></h2>
+<ul>
+<li><p>Cada imagen debe tener (a menos que sea únicamente decorativa):</p>
+<ul>
+<li><span style="color:red;">Descripción</span></li>
+<li><span style="color:red;">Título</span></li>
+<li><span style="color:red;">Texto alternativo <span style="color:red;"></li>
+</ul></li>
+<li><p>Consulte las Pautas de imágenes de DIAGRAM Center para EPUB 3 para conocer las mejores prácticas de marcado.</p></li>
+</ul>
+</section><section id="incluir-números-de-página" class="slide level2">
+<h2><span style="color:#FFFF00;"> Incluir números de página </span></h2>
+<ul>
+<li><p>Son la forma en que muchas personas navegan por un libro.</p></li>
+<li><p>Para cualquier libro con un equivalente impreso, utilice el atributo <code>epub:type=”pagebreak”</code> para designar los números de página.</p></li>
+<li><p>Incluya el ISBN de la fuente de los números de página en los metadatos del paquete del libro.</p></li>
+</ul>
+</section><section id="definir-el-idiomas" class="slide level2">
+<h2><span style="color:#FFFF00;">Definir el idioma(s)</span></h2>
+<ul>
+<li><p>Para asegurarse de que cada palabra se represente correctamente, especifique el idioma predeterminado del contenido en la etiqueta <strong>html raíz</strong>.</p></li>
+<li><p>Indique cualquier palabra, frase o pasaje en un idioma diferente utilizando el atributo <code>xml:lang:</code> <code>&lt;span xml:lang=”fr”</code> <code>lang=”fr”&gt;rue Saint-Andre-des-Arts&lt;/span&gt;</code>.</p></li>
+</ul>
+</section><section id="utilice-matemáticasml" class="slide level2">
+<h2><span style="color:#FFFF00;">Utilice MatemáticasML</span></h2>
+<ul>
+<li>MathML hace que las ecuaciones matemáticas sean accesibles para todos al eliminar la ambigüedad de una descripción verbal de una imagen.</li>
+</ul>
+<figure>
+<img data-src="mathml.png" alt="Ejemplo de mathML" /><figcaption>Ejemplo de mathML</figcaption>
+</figure>
+</section><section id="proporcionar-acceso-alternativo-al-contenido-multimedia." class="slide level2">
+<h2><span style="color:#FFFF00;">Proporcionar acceso alternativo al contenido multimedia.</span></h2>
+<ul>
+<li><p>Asegúrese de que los controles nativos para contenido de video y audio estén habilitados de forma predeterminada.</p></li>
+<li><p>Proporcione opciones alternativas, como subtítulos o descripciones para videos y transcripciones para audio.</p></li>
+</ul>
+</section><section id="hacer-accesible-el-contenido-interactivo" class="slide level2">
+<h2><span style="color:#FFFF00;">Hacer accesible el contenido interactivo </span></h2>
+<ul>
+<li><p>El contenido interactivo que utiliza JavaScript o SVG debe ser accesible.</p></li>
+<li><p>Todos los controles personalizados deben implementar completamente las funciones, estados y propiedades de ARIA, según corresponda.</p></li>
+</ul>
+</section><section id="utilice-metadatos-de-accesibilidad" class="slide level2">
+<h2><span style="color:#FFFF00;">Utilice metadatos de accesibilidad</span></h2>
+<ul>
+<li>Una buena práctica general son los metadatos de accesibilidad para que los usuarios finales sepan qué funciones existen y para que los motores de búsqueda puedan descubrir sus materiales accesibles.</li>
+</ul>
+</section><section id="otras-técnicas-rápidas-de-accesibilidad-en-epub" class="slide level2">
+<h2><span style="color:#FFFF00;">Otras técnicas rápidas de accesibilidad en EPUB</span></h2>
+<ul>
+<li><p>Use la maquetación fluida para lograr la máxima compatibilidad con los lectores de pantalla, lentes de aumento y navegación.</p></li>
+<li><p>Incluya, siempre que sea posible, un video en lengua de señas (sincronizado o incrustado).</p></li>
+</ul>
+</section></section>
+    </div>
+  </div>
+
+  <script src="reveal.js/lib/js/head.min.js"></script>
+  <script src="reveal.js/js/reveal.js"></script>
+
+  <script>
+
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        theme: 'black', // available themes are in /css/theme
+        transition: 'slide', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+          { src: 'reveal.js/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'reveal.js/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+          { src: 'reveal.js/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+//          { src: 'reveal.js/plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; }, }
+//          { src: 'reveal.js/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+]});
+    </script>
+  </body>
+</html>
