@@ -1,0 +1,205 @@
+<html>
+<head>
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/night.css">
+    <style>
+	  .fragment.blur {
+	    filter: blur(10px);
+	  }
+	  .fragment.blur.visible {
+	    filter: none;
+  }
+  @keyframes heartbeat {
+        from {
+            transform: scale(1);
+        }
+        to {
+            transform: scale(1.2);
+        }
+    }
+     @keyframes fadeOut {
+                0% { opacity: 1; }
+                100% { opacity: 0; }
+            }
+	</style>
+</head>
+<body>
+    </div>
+    <div class="reveal">
+        <div class="slides">
+
+<!--PORTADA -->
+
+<section id="Portada" data-background-video="video/Presentacion.mp4" alt="Presentación personal ¿quién soy?"data-background-video-loop="true" data-background-video-muted="true">
+</section>
+
+<!--FIN PORTADA -->
+
+<!--INSTRUCCIONES -->
+
+<section>
+    <section id="instrucciones" data-background-color="#FFFFE0"> <!-- Fondo amarillo muy claro -->
+        <h1 style="color: black; font-size: 2em; background-color: rgba(255, 229, 180, 0.8);">INSTRUCCIONES DE ACCESIBILIDAD</h1>
+        <div style="animation: fadeOut 4s ease-in-out infinite;">
+            <p style="color: black; background-color: rgba(255, 229, 180, 0.8);">¡Atención!</p>
+        </div>
+        <ul style="color: black; text-align: justify;">
+            <li>La presentación se reproducirá de forma automática. Si considera que el ritmo es muy rápido, puede ir parando. Para ello, pulse <b>«A»</b> o el botón inferior izquierdo para reproducir y reanudar. Puede usar el mando en la esquina derecha para avanzar entre secciones.</li>
+            <li>Para ver la presentación con pantalla completa, pulse la tecla «F». Para salir de ella, clique «ESC».</li>
+            <li>También puede pulsar «ESC» para ver la presentación de forma esquemática.</li>
+            <li>Si lo desea, pulse «S» para acceder al Speaker View.</li>
+        </ul>
+    </section>
+</section>
+<!--FIN INSTRUCCIONES-->
+<!-- Índice -->
+    <section>
+      <h1 style="background-color: rgba(28, 39, 21, 0.8); color: white;">Índice</h1>
+        <div class="content">
+        <ul style="color: white">
+  			<li> <a class="index-links" href="#quien-eres"> Saludo inicial </a></li>
+             <li><a class="index-links" href="#sobre-mi"> Sobre mí</a></li>
+             <li><a class="index-links" href="#aficiones">Mis aficiones</a></li>
+             <li><a class="index-links" href="#trayectoria"> Mi trayectoria</a></li>
+             <li><a class="index-links" href="#otros-detalles">¿Qué más puedo decir?</a></li>
+             <li><a class="index-links" href="#despedida"> Despedida </a></li>
+           	<li><a class="index-links" href="#recuerda"> Recuerda</a></li>
+            <li><a class="index-links" href="#tips-ejemplos"> Tips y ejemplos para tu presentación</a></li>
+        </ul>
+                </div>
+            </section>
+<!-- FIN ÍNDICE -->
+
+<section data-background-video="video.mp4" alt="Presentación personal ¿quién soy?"data-background-video-loop="true" data-background-video-muted="true">
+    <p style="background-color: rgba(255, 255, 255, 0.7); padding: 10px; color: #ff6600; font-size: 1.5em;">¿Preparado/a para grabarte?</p>
+</section>
+
+            <section id="quien-eres" data-transition="fade-in slide-out">
+                <h2>¿Quién eres?</h2>
+                <h2 class="fragment grow";>¡Hola, soy [Tu nombre (opcional apellidos)]!</h2>
+                <p>Mi presentación personal</p>
+                <p class="fragment fade-out"> No te olvides de empezar saludando.</p>
+            </section>
+
+            <section id="sobre-mi" data-transition="slide">
+                <h2>Sobre mí</h2>
+                <p>Estoy emocionado/a de compartir un poco sobre mí en este vídeo</p>
+                <p>Tengo 24 años. Mis amigos dicen que soy <span class="fragment highlight-red">extrovertido/a</span> y <span class="fragment highlight-green">amigable</span>.</p>
+                <p class="fragment" data-fragment-index="7" data-fragment-transition="fade-out">Pero yo digo que soy un poco tímido, aunque nadie se lo crea</p>
+
+           </section>
+          
+          <section id="aficiones">
+            <section data-transition="fade-in slide-out">
+                <h2>Mis aficiones</h2>
+                <ul>
+                    <li>Me apasiona <span class="fragment grow">la fotografía</span>.</li>
+                    <li>Disfruto mucho de <span class="fragment highlight-blue">viajar y explorar nuevas culturas</span></li>
+                    <li>Me encanta aprender <span class="fragment fade-out">sobre tecnología y ciencia</span></li>
+                </ul>
+           
+			  <p class="fragment blur">Hay varias maneras de decir tus aficiones:</p>
+			  <p class="fragment blur">Me gusta</p>
+			  <p class="fragment blur">Me encanta</p>
+			  <p class="fragment blur">Soy aficionado/a [...]</p>
+			  <p class="fragment blur">Cada una indica una intensidad diferente</p>
+            </section>
+
+            <section data-transition="fade-in slide-out">
+            	<p>Un ejemplo de mis aficiones</p>
+            	<video width="640" height="360" controls>
+					  <source src="video/aficiones.mp4" type="video/mp4">
+					  Tu navegador no soporta el elemento de video.
+					</video>
+            </section>
+		
+		</section>
+
+            <section id="trayectoria" data-transition="fade-in slide-out">
+                <h2>Mi trayectoria</h2>
+                <p>Actualmente soy <span class="fragment fade-up">estudiante de ingeniería en</span> <span class="fragment fade-up">la Universidad XYZ</span></p>
+                <p>Me interesan especialmente <span class="fragment fade-in">los avances en inteligencia artificial</span></p>
+                <ul>
+                	<li class="fragment current-visible">Recuerda, si dices que trabajas dirás "Estoy trabajando de [...] y NO <del><span style="color: red;">Soy trabajando de [...]</span></del>. Sí puedes decir "Soy + profesión" (Soy ingeniero).</li>
+                </ul>
+            </section>
+            <section data-transition="slide" id="otros-detalles">
+                <h2>¿Qué más puedo decir?</h2>
+                <p>Además de los detalles básicos, como mi nombre y edad, también puedo compartir detalles interesantes <span class="fragment fade-in">sobre mis pasatiempos y hobbies. Por ejemplo:</span></p>
+                <ul>
+				  <li class="fragment grow">Mi estado civil: Actualmente estoy soltero, pero estoy comprometido con mi carrera y mi desarrollo personal.</li>
+				  <li class="fragment shrink">Mis intereses: Me apasiona la fotografía y me encanta viajar para capturar momentos únicos en diferentes lugares del mundo.</li>
+				  <li class="fragment fade-out">Mis metas: Estoy trabajando en mejorar mis habilidades de liderazgo y me estoy preparando para participar en un proyecto de voluntariado el próximo año.</li>
+				</ul>
+            </section>
+            <section id="despedida" data-background-image="pensar.jpg" data-transition="slide-in fade-out" style="background-color: rgba(255, 255, 204, 0.8); color: navy;">
+            	<h2 style="color: #333;">Despedida</h2>
+                <p class="fragment fade-out">Gracias por escucharme</p>
+                <p>¡Gracias por tomarte el tiempo de conocerme un poco mejor!</p>
+                <p class="fragment fade-in-then-out"> ¡hasta luego! </p>
+                <p> ¡hasta pronto!</p>
+            </section>
+
+ <section id ="recuerda" data-transition="fade-in slide-out" data-background-color="#ffffff">
+  <h2 style="color: #333;">RECUERDA QUÉ <span style="color: red;">NO</span> DEBE FALTAR EN LAS DIAPOSITIVAS:</h2>
+
+<ol style="color: #000000;">
+<li data-fragment-index="1">TU NOMBRE. ¿Cómo te llamas?</li>
+    <li class="fragment fade-out" data-fragment-index="3">TUS APELLIDOS -opcional-</li>
+    <li data-fragment-index="2">¿CUÁNTOS AÑOS TIENES? <span class="fragment fade-in-then-out">Tengo 24 años</span></li>
+    <li data-fragment-index="4">¿ESTUDIAS O TRABAJAS? <span class="fragment fade-in-then-out">Soy estudiante</span></li>
+    <li data-fragment-index="5">¿DÓNDE? <span class="fragment fade-in-then-out">Estudio en la Complutense</span></li>
+    <li data-fragment-index="6">¿QUÉ TE GUSTA HACER? <span class="fragment fade-in-then-out">Me encanta viajar</span></li>
+</section>
+
+<section id="tips-ejemplos">
+<section>
+	<img src="Presentacion.png" alt="Tips para la tarea">
+
+</section>
+<section id="ejemplos">
+	<div class="r-stack">
+  <img class="fragment fade-out"  data-fragment-index="0" src="presentaciones.png" width="550" height="600">
+  <img class="fragment current-visible" data-fragment-index="0" src="presentarse.jpeg" width="300" height="450">
+</div>
+	</section>
+</section>
+
+<section data-background-image="fin.jpg">
+	<p style="font-size: 2em; color: #ff6600; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); animation: heartbeat 1s infinite;"> GRACIAS </p>
+</section>
+
+ </div>
+ </div>
+   <script src="lib/js/head.min.js"></script>
+   <script src="js/reveal.js"></script>
+   <script>
+            Reveal.initialize({
+            controls: true,
+            controlsTutorial: true,
+            slideNumber: 'c/t',
+            progress: true,
+            touch: true,
+            keyboard: true,
+            history: true,
+            hideInactiveCursor: true,
+            hideCursorTime: 5000,
+            backgroundTransition: 'fade',
+            fragments: true,
+            fragmentInURL: true,
+            autoAnimateFragment: true,
+            focusBodyOnPageVisibilityChange: true,
+            autoSlide: 8000,
+            transition: 'zoom',
+        
+              dependencies: [
+                { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                { src: 'plugin/search/search.js'},
+                { src: 'plugin/notes/notes.js'},
+                { src: 'plugin/zoom/zoom.js'},      
+              ]
+            });
+        </script>
+
+</body>
+</html>
