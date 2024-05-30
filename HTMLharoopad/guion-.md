@@ -9,7 +9,7 @@ date: "22 de mayo de 2024"
 
 ---
 
-![Guion de prácticas](guion-pract.png "Guion de prácticas: español A1" "width:600px;height:400px;float:center;")
+![Guion de prácticas](guion-pract.png")
 <!--esto es un comentario-->
 
 # Índice
